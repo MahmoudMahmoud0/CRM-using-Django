@@ -1,0 +1,48 @@
+{% load static %}
+
+<!DOCTYPE html>
+
+<html lang="eng">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>DJCRM</title>
+
+        <link href="{% static 'css/styles.css' %}" rel="stylesheet">
+
+        <style> 
+            /* use these instead
+            getbootstrap.com
+            tailwindcss.com: <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+            awesome tailwindcss repository on github
+            tailblocks repository on github: https://tailblocks.cc/
+            */
+            .lead {
+                padding-top: 10px;
+                padding-bottom: 10px;
+                padding-left: 6px;
+                padding-right: 6px;
+                margin-top: 10px;
+                background-color: #f6f6f6;
+                width: 100%;
+            }
+        </style>
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    </head>
+
+    <body>
+        <!-- <div class="max-w-4xl mx-auto bg-gray-100"> -->
+        <div class="max-w-4xl mx-auto">
+
+            {% include "navbar.html" %}
+
+
+            {% block content %}
+            {% endblock content %}
+            {% include "scripts.html" %}
+
+        </div>
+    </body>
+
+</html>
